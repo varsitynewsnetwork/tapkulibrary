@@ -14,4 +14,5 @@ xcuserdata
 
 # osx noise
 .DS_Store
+**.xccheckout
 demo/Demo.xcodeproj/project.xcworkspace/xcshareddata/Demo.xccheckout
