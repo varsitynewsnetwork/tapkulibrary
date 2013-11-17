@@ -153,6 +153,8 @@
 		3BF9A833159791EA002A7F9E /* TKShapeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF9A831159791EA002A7F9E /* TKShapeView.h */; };
 		3BF9A834159791EA002A7F9E /* TKShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF9A832159791EA002A7F9E /* TKShapeView.m */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		ACF677FC1839772E00A920D7 /* TKMonthDetailCell.h in Headers */ = {isa = PBXBuildFile; fileRef = ACF677F91839772E00A920D7 /* TKMonthDetailCell.h */; };
+		ACF677FD1839772E00A920D7 /* TKMonthDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF677FA1839772E00A920D7 /* TKMonthDetailCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -302,6 +304,9 @@
 		3BF9A832159791EA002A7F9E /* TKShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKShapeView.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* TapkuLibrary_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapkuLibrary_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ACF677F91839772E00A920D7 /* TKMonthDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKMonthDetailCell.h; sourceTree = "<group>"; };
+		ACF677FA1839772E00A920D7 /* TKMonthDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKMonthDetailCell.m; sourceTree = "<group>"; };
+		ACF677FB1839772E00A920D7 /* TKMonthDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKMonthDetailCell.xib; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB518D /* libTapkuLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTapkuLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -594,6 +599,9 @@
 		3BF002FE109662E30062DA49 /* Month */ = {
 			isa = PBXGroup;
 			children = (
+				ACF677F91839772E00A920D7 /* TKMonthDetailCell.h */,
+				ACF677FA1839772E00A920D7 /* TKMonthDetailCell.m */,
+				ACF677FB1839772E00A920D7 /* TKMonthDetailCell.xib */,
 				3BAC99FE10953E2400F235F1 /* TKCalendarMonthViewController.h */,
 				3BAC99FF10953E2400F235F1 /* TKCalendarMonthViewController.m */,
 				3B879FC4109BFC07002012FD /* TKCalendarMonthTableViewController.h */,
@@ -622,6 +630,7 @@
 				20529A3A17FF46A400FFF627 /* UIActionSheet+TKCategory.h in Headers */,
 				3B6EDDE011547C1600E454DA /* TKGlobal.h in Headers */,
 				3B6EDDE211547C1800E454DA /* NSString+TKCategory.h in Headers */,
+				ACF677FC1839772E00A920D7 /* TKMonthDetailCell.h in Headers */,
 				20529A3617FF465800FFF627 /* UIAlertView+TKCategory.h in Headers */,
 				2014592C17A107FF00629488 /* UIGestureRecognizer+TKCategory.h in Headers */,
 				3B6EDDE511547C1E00E454DA /* NSDate+TKCategory.h in Headers */,
@@ -833,6 +842,7 @@
 				3BB96F5912B55CD600C38F46 /* UIImageView+TKCategory.m in Sources */,
 				2002B17817D241C2002440AE /* UIScreen+TKCategory.m in Sources */,
 				2014592D17A107FF00629488 /* UIGestureRecognizer+TKCategory.m in Sources */,
+				ACF677FD1839772E00A920D7 /* TKMonthDetailCell.m in Sources */,
 				3BEE1CBC12CFB78300FECF6D /* TKProgressCircleView.m in Sources */,
 				3B4346E512DA6A240076579B /* UIButton+TKCategory.m in Sources */,
 				2014592917A1077D00629488 /* TKReorderTableView.m in Sources */,
