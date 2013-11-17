@@ -75,19 +75,20 @@
 	if(ar == nil) return 0;
 	return [ar count];
 }
-- (UITableViewCell *) tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tv dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    
-	
+- (TKMonthDetailCell *) tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *CellIdentifier = @"TKMonthDetailCell";
+    TKMonthDetailCell *cell = (TKMonthDetailCell*)[tv dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = (TKMonthDetailCell*)[super tableView:tv cellForRowAtIndexPath:indexPath];
+    }
     
 	NSArray *ar = self.dataDictionary[[self.monthView dateSelected]];
-	cell.textLabel.text = ar[indexPath.row];
+    cell.titleLabel.text =  ar[indexPath.row];
+    NSDateFormatter *timeFormat = [[NSDateFormatter alloc] init];
+    [timeFormat setDateFormat:@"hh:mm"];
+    cell.timeLabel.text = [NSString stringWithFormat:@"%@", [timeFormat stringFromDate:[self.monthView dateSelected]]] ;
 	
     return cell;
-	
 }
 
 
