@@ -44,7 +44,7 @@
 	@"z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5"  
 	@"]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-"  
 	@"9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21"  
-	@"-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])";  
+	@"-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])"; 
 	
     NSPredicate *regExPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegEx];  
     return [regExPredicate evaluateWithObject:[self lowercaseString]];  
@@ -164,7 +164,7 @@
 
 - (NSString *) md5sum{
 	unsigned char digest[CC_MD5_DIGEST_LENGTH], i;
-	CC_MD5([self UTF8String], [self lengthOfBytesUsingEncoding:NSUTF8StringEncoding], digest);
+	CC_MD5([self UTF8String], (uint32_t)[self lengthOfBytesUsingEncoding:NSUTF8StringEncoding], digest);
 	NSMutableString *ms = [NSMutableString string];
 	for (i=0;i<CC_MD5_DIGEST_LENGTH;i++) {
 		[ms appendFormat: @"%02x", (int)(digest[i])];
@@ -200,8 +200,7 @@
 	if((digits.length > 11 && leadingOne) || (digits.length > 10 && !leadingOne))
 		return digits;
 	
-	
-	NSRegularExpressionOptions opt = NSRegularExpressionSearch;
+	NSStringCompareOptions opt = NSRegularExpressionSearch;
 	NSRange range = NSMakeRange(0, digits.length);
 	
 	NSString *occurence, *replace;
