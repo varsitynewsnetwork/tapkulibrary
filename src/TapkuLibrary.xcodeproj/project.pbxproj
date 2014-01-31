@@ -155,6 +155,8 @@
 		3BF9A833159791EA002A7F9E /* TKShapeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF9A831159791EA002A7F9E /* TKShapeView.h */; };
 		3BF9A834159791EA002A7F9E /* TKShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF9A832159791EA002A7F9E /* TKShapeView.m */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		AC2D3429189BE5FF009F267F /* TKActivityAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = AC2D3427189BE5FF009F267F /* TKActivityAlertView.h */; };
+		AC2D342A189BE5FF009F267F /* TKActivityAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2D3428189BE5FF009F267F /* TKActivityAlertView.m */; };
 		ACF677FC1839772E00A920D7 /* TKMonthDetailCell.h in Headers */ = {isa = PBXBuildFile; fileRef = ACF677F91839772E00A920D7 /* TKMonthDetailCell.h */; };
 		ACF677FD1839772E00A920D7 /* TKMonthDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF677FA1839772E00A920D7 /* TKMonthDetailCell.m */; };
 /* End PBXBuildFile section */
@@ -308,6 +310,8 @@
 		3BF9A832159791EA002A7F9E /* TKShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKShapeView.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* TapkuLibrary_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapkuLibrary_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AC2D3427189BE5FF009F267F /* TKActivityAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKActivityAlertView.h; sourceTree = "<group>"; };
+		AC2D3428189BE5FF009F267F /* TKActivityAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKActivityAlertView.m; sourceTree = "<group>"; };
 		ACF677F91839772E00A920D7 /* TKMonthDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKMonthDetailCell.h; sourceTree = "<group>"; };
 		ACF677FA1839772E00A920D7 /* TKMonthDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKMonthDetailCell.m; sourceTree = "<group>"; };
 		ACF677FB1839772E00A920D7 /* TKMonthDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKMonthDetailCell.xib; sourceTree = "<group>"; };
@@ -490,6 +494,8 @@
 				3BD32971125B753900BE5EAF /* TKAlertCenter.m */,
 				3BA577B81199DF1600ECB85B /* TKProgressAlertView.h */,
 				3BA577B91199DF1600ECB85B /* TKProgressAlertView.m */,
+				AC2D3427189BE5FF009F267F /* TKActivityAlertView.h */,
+				AC2D3428189BE5FF009F267F /* TKActivityAlertView.m */,
 				3BB92D2011896022002FA0F9 /* TKProgressBarView.h */,
 				3BB92D2111896022002FA0F9 /* TKProgressBarView.m */,
 				3BEE1CB912CFB78300FECF6D /* TKProgressCircleView.h */,
@@ -679,6 +685,7 @@
 				3B8F0DF6142AE52B00E3AADE /* TKGradientView.h in Headers */,
 				3B17D26C142E31C40090616F /* TKHTTPRequest.h in Headers */,
 				3B17D289142E3CD40090616F /* TKNetworkQueue.h in Headers */,
+				AC2D3429189BE5FF009F267F /* TKActivityAlertView.h in Headers */,
 				3B560B7214574E30005FBDBF /* TKImageCache.h in Headers */,
 				3B819B5414601DC500EC0097 /* TKViewController.h in Headers */,
 				3BF9A833159791EA002A7F9E /* TKShapeView.h in Headers */,
@@ -824,6 +831,7 @@
 				3B6EDDF211547C2C00E454DA /* TKCalendarDayViewController.m in Sources */,
 				3B6EDDF411547C2D00E454DA /* TKCalendarDayView.m in Sources */,
 				3B6EDDF611547C3000E454DA /* TKCalendarDayEventView.m in Sources */,
+				AC2D342A189BE5FF009F267F /* TKActivityAlertView.m in Sources */,
 				20529A3B17FF46A400FFF627 /* UIActionSheet+TKCategory.m in Sources */,
 				20529A3717FF465800FFF627 /* UIAlertView+TKCategory.m in Sources */,
 				3B6EDDFC11547C3800E454DA /* TKEmptyView.m in Sources */,

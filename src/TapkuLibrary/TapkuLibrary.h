@@ -91,6 +91,7 @@
 #import "TKProgressAlertView.h"
 #import "TKProgressCircleView.h"
 #import "TKLoadingView.h"
+#import "TKActivityAlertView.h"
 
 // Calendar
 #import "TKCalendarMonthViewController.h"

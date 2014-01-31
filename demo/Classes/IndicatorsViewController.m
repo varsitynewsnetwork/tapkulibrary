@@ -67,7 +67,11 @@
 		[self.progressBar setProgress:0];
 		[self.progressBarAlternative setProgress:0 animated:NO];
 		
-
+        TKActivityAlertView *activity = [[TKActivityAlertView alloc] initWithActivityTitle:@"Loading important stuff!" style:UIActivityIndicatorViewStyleGray];
+        [activity show];
+        
+        [self performSelector:@selector(activityStepTwo:) withObject:activity afterDelay:5];
+        
 		TKProgressAlertView *alert = [[TKProgressAlertView alloc] initWithProgressTitle:@"Loading important stuff!"];
 		alert.progressBar.progress = 0;
 		[alert show];
@@ -75,9 +79,14 @@
 		[self performSelector:@selector(stepTwo:) withObject:alert afterDelay:2];
 		[self performSelector:@selector(stepThree:) withObject:alert afterDelay:4];
 		
+        
 	}
 	
 	
+}
+- (void) activityStepTwo:(TKActivityAlertView*)activity{
+    
+    [activity hide];
 }
 - (void) stepTwo:(TKProgressAlertView*)alert{
 	
@@ -111,7 +120,7 @@
 }
 - (TKProgressCircleView *) progressCircle{
 	if(_progressCircle) return _progressCircle;
-
+    
 	_progressCircle = [[TKProgressCircleView alloc] init];
 	_progressCircle.center = CGPointMake(self.view.bounds.size.width/2, 120);
 	return _progressCircle;
