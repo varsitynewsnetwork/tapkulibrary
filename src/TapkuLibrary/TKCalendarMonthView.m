@@ -742,8 +742,7 @@ static UIImage *tileImage;
 	return self;
 }
 - (id) initWithFrame:(CGRect)frame{
-	self = [self init];
-	return self;
+    return [super initWithFrame:frame];
 }
 
 - (void) didMoveToWindow{
