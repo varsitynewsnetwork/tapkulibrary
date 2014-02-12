@@ -155,6 +155,8 @@
 		3BF9A833159791EA002A7F9E /* TKShapeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BF9A831159791EA002A7F9E /* TKShapeView.h */; };
 		3BF9A834159791EA002A7F9E /* TKShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BF9A832159791EA002A7F9E /* TKShapeView.m */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		AC538C8718ABEA6200E21223 /* TKTextLabelsCell.h in Headers */ = {isa = PBXBuildFile; fileRef = AC538C8518ABEA6200E21223 /* TKTextLabelsCell.h */; };
+		AC538C8818ABEA6200E21223 /* TKTextLabelsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC538C8618ABEA6200E21223 /* TKTextLabelsCell.m */; };
 		ACF677FC1839772E00A920D7 /* TKMonthDetailCell.h in Headers */ = {isa = PBXBuildFile; fileRef = ACF677F91839772E00A920D7 /* TKMonthDetailCell.h */; };
 		ACF677FD1839772E00A920D7 /* TKMonthDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF677FA1839772E00A920D7 /* TKMonthDetailCell.m */; };
 /* End PBXBuildFile section */
@@ -308,6 +310,8 @@
 		3BF9A832159791EA002A7F9E /* TKShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKShapeView.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* TapkuLibrary_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapkuLibrary_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AC538C8518ABEA6200E21223 /* TKTextLabelsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKTextLabelsCell.h; sourceTree = "<group>"; };
+		AC538C8618ABEA6200E21223 /* TKTextLabelsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKTextLabelsCell.m; sourceTree = "<group>"; };
 		ACF677F91839772E00A920D7 /* TKMonthDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKMonthDetailCell.h; sourceTree = "<group>"; };
 		ACF677FA1839772E00A920D7 /* TKMonthDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKMonthDetailCell.m; sourceTree = "<group>"; };
 		ACF677FB1839772E00A920D7 /* TKMonthDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKMonthDetailCell.xib; sourceTree = "<group>"; };
@@ -460,6 +464,8 @@
 				3BAC9A3610953E5200F235F1 /* TKTextViewCell.m */,
 				3BAC9A3C10953E5200F235F1 /* TKTableViewCell.h */,
 				3BAC9A3D10953E5200F235F1 /* TKTableViewCell.m */,
+				AC538C8518ABEA6200E21223 /* TKTextLabelsCell.h */,
+				AC538C8618ABEA6200E21223 /* TKTextLabelsCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -632,6 +638,7 @@
 				3B6EDDDB11547C1100E454DA /* UIView+TKCategory.h in Headers */,
 				20DAFB031814BAAC00EF525B /* TKRetroButton.h in Headers */,
 				3B6EDDDC11547C1300E454DA /* UIImage+TKCategory.h in Headers */,
+				AC538C8718ABEA6200E21223 /* TKTextLabelsCell.h in Headers */,
 				3B6EDDDF11547C1400E454DA /* TKWindow.h in Headers */,
 				20529A3A17FF46A400FFF627 /* UIActionSheet+TKCategory.h in Headers */,
 				3B6EDDE011547C1600E454DA /* TKGlobal.h in Headers */,
@@ -855,6 +862,7 @@
 				3B4346E512DA6A240076579B /* UIButton+TKCategory.m in Sources */,
 				2014592917A1077D00629488 /* TKReorderTableView.m in Sources */,
 				3B9D93DB12F74F8F007D839C /* TKAppDelegate.m in Sources */,
+				AC538C8818ABEA6200E21223 /* TKTextLabelsCell.m in Sources */,
 				3B07B7CB133ADAD8001B1C6F /* UIBarButtonItem+TKCategory.m in Sources */,
 				3B166A70137F38D7006298E6 /* UIColor+TKCategory.m in Sources */,
 				3B8F0DF7142AE52B00E3AADE /* TKGradientView.m in Sources */,

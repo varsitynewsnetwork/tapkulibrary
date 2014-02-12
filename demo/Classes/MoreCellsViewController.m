@@ -58,13 +58,19 @@
 	//self.textViewCell.textView.text = @"TextView Cell - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent blandit malesuada turpis quis egestas. Curabitur varius nunc nec leo tincidunt mattis. Cras malesuada euismod lobortis. Praesent ultrices malesuada lorem et convallis. Pellentesque hendrerit lectus eget felis rutrum vel volutpat nisl semper. Suspendisse consectetur sem eu arcu ullamcorper ut cursus est fringilla. Suspendisse blandit rhoncus nisi ac lacinia. Curabitur vestibulum mattis eros a accumsan. Morbi pulvinar consequat hendrerit. In hac habitasse platea dictumst. Mauris euismod convallis faucibus. Morbi faucibus ultricies elit, ac ullamcorper ipsum accumsan et.";
 	self.textViewCell.textView.placeholder = @"Placeholder";
 	
+    self.textLabelsCell = [[TKTextLabelsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    self.textLabelsCell.field1.text = @"Start";
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    [fmt setDateStyle:NSDateFormatterLongStyle];
+    [fmt setTimeStyle:NSDateFormatterShortStyle];
+    self.textLabelsCell.field2.text = [fmt stringFromDate:[NSDate date]];
 	
 
 }
 
 #pragma mark UITableView Delegate & DataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 4;
+    return 5;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
@@ -83,6 +89,9 @@
 		case 2:
 			cell = self.textFieldCell;
 			break;
+        case 3:
+            cell = self.textLabelsCell;
+            break;
 		default:
 			cell = self.textViewCell;
 			break;
@@ -93,7 +102,7 @@
 	
 }
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-	return indexPath.section == 3 ? 140 : 44;
+	return indexPath.section == 4 ? 140 : 44;
 }
 
 
