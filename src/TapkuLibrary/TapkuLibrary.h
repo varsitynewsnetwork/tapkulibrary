@@ -84,6 +84,7 @@
 #import "TKTextViewCell.h"
 #import "TKSwitchCell.h"
 #import "TKTableViewCell.h"
+#import "TKTextLabelsCell.h"
 
 // HUD
 #import "TKAlertCenter.h"

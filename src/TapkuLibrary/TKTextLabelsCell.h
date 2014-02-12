@@ -1,10 +1,10 @@
 //
-//  MoreCellsViewController.h
-//  Created by Devin Ross on 4/15/10.
+//  TKTextLabelsCell.h
+//  Created by Giovanni Maggini on 12/02/14
 //
 /*
  
- tapku || https://github.com/devinross/tapkulibrary
+ tapku || http://github.com/devinross/tapkulibrary
  
  Permission is hereby granted, free of charge, to any person
  obtaining a copy of this software and associated documentation
@@ -28,18 +28,15 @@
  OTHER DEALINGS IN THE SOFTWARE.
  
  */
-
 @import UIKit;
-#import <TapkuLibrary/TapkuLibrary.h>
 
-#pragma mark - MoreCellsViewController
-@interface MoreCellsViewController : UITableViewController 
+/** A `UITableViewCell` with 2 UILabels */
+@interface TKTextLabelsCell : UITableViewCell
 
-@property (nonatomic,strong) TKButtonCell *buttonCell;
-@property (nonatomic,strong) TKSwitchCell *switchCell;
-@property (nonatomic,strong) TKTextViewCell *textViewCell;
-@property (nonatomic,strong) TKTextFieldCell *textFieldCell;
-@property (nonatomic,strong) TKTextLabelsCell *textLabelsCell;
+/** A `UILabel` field. */
+@property (nonatomic,strong) UILabel *field1;
+/** A `UILabel` field. */
+@property (nonatomic,strong) UILabel *field2;
 
 
 @end
