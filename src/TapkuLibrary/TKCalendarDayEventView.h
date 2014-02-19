@@ -32,6 +32,11 @@
 @import UIKit;
 @import QuartzCore;
 
+typedef enum { // add more colors what you need
+    TKCalendarEventColorBlue, // Default
+    TKCalendarEventColorRed
+} TKCalendarEventColor;
+
 #pragma mark - TKCalendarDayEventView
 /** `TKCalendarDayEventView` is displayed by `TKCalendarDayView`. */
 @interface TKCalendarDayEventView : UIView
@@ -42,6 +47,9 @@
 + (TKCalendarDayEventView*) eventView;
 
 + (TKCalendarDayEventView*) eventViewWithIdentifier:(NSNumber *)identifier startDate:(NSDate *)startDate endDate:(NSDate *)endDate title:(NSString *)title location:(NSString *)location;
+
+/** This is the color type of the event. */
+@property (nonatomic) TKCalendarEventColor colorType;
 
 /** The identifier for the event. */
 @property (nonatomic,strong) NSNumber *identifier;
