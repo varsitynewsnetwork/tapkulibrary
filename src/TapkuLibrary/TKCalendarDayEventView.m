@@ -172,9 +172,14 @@
     
     switch (type) {
         case TKCalendarEventColorRed:
-            textHexColor = 0xCC1600;
-            backgroundHexColor = 0x7F1F13;
-            borderHexColor = 0xFF1C00;
+            textHexColor = 0x920814;
+            backgroundHexColor = 0xE6666A;
+            borderHexColor = 0xD04D52;
+            break;
+        case TKCalendarEventColorGreen:
+            textHexColor = 0x279814;
+            backgroundHexColor = 0x7DED6A;
+            borderHexColor = 0x65D752;
             break;
         case TKCalendarEventColorBlue:
         default:

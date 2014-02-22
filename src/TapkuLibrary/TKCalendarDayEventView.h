@@ -34,7 +34,8 @@
 
 typedef enum { // add more colors what you need
     TKCalendarEventColorBlue, // Default
-    TKCalendarEventColorRed
+    TKCalendarEventColorRed,
+    TKCalendarEventColorGreen
 } TKCalendarEventColor;
 
 #pragma mark - TKCalendarDayEventView

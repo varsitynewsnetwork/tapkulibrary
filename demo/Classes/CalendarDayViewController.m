@@ -49,7 +49,8 @@
 		
 		TKCalendarDayEventView *event = [calendarDayTimeline dequeueReusableEventView];
 		if(event == nil) event = [TKCalendarDayEventView eventView];
-        [event setColorType:TKCalendarEventColorRed];
+        NSInteger col = arc4random_uniform(3);
+        [event setColorType:col];
 		event.identifier = nil;
 		event.titleLabel.text = ar[0];
 		event.locationLabel.text = ar[1];
