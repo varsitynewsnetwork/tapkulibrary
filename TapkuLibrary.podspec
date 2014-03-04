@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
                     'use in applications. If you\'re looking to see what the library can do, check ' \
                     'out the demo project included. Some major components include coverflow, calendar ' \
                     'grid, network requests and progress indicators.'
-  s.source        = { :git => 'https://github.com/atomicobject/tapkulibrary.git', :branch => 'ios7' }
+  s.source        = { :git => 'https://github.com/atomicobject/tapkulibrary.git', :commit => '1a3c7500be84cfae5d032e5fa806a732299f1a75' }
   s.requires_arc  = true
   s.source_files  = 'src/TapkuLibrary/*.{h,m}'
   s.resources     = 'src/TapkuLibrary.bundle'
