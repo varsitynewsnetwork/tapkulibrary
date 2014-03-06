@@ -46,7 +46,9 @@
 	self.navigationController.view.backgroundColor = [UIColor whiteColor];
 	self.window.backgroundColor = [UIColor whiteColor];
 	
-	
+	[[TKCalendarMonthView appearance] setTintColor:[UIColor redColor]];
+	[[TKCalendarMonthView appearance] setSelectedTintColor:[UIColor blueColor]];
+    
 	if([[UIDevice currentDevice] userInterfaceIdiom] ==  UIUserInterfaceIdiomPad){
 		
 		self.splitViewController = [[UISplitViewController alloc] init];

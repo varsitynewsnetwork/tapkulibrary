@@ -94,5 +94,6 @@
  */
 - (void) animateToNextOrPreviousMonth:(BOOL)next;
 
+@property(nonatomic, strong) UIColor *selectedTintColor UI_APPEARANCE_SELECTOR;
 
 @end

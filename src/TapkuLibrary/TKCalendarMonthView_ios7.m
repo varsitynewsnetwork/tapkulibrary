@@ -76,7 +76,7 @@ static NSNumberFormatter *numberFormatter = nil;
 @property (nonatomic,strong) NSArray *datesArray;
 @property (nonatomic,strong) NSTimeZone *timeZone;
 @property (nonatomic,strong) NSArray *marks;
-
+@property(nonatomic, strong) UIColor *selectedTintColor;
 @end
 
 
@@ -413,10 +413,11 @@ static NSNumberFormatter *numberFormatter = nil;
 		
 	}else if(markWasOnToday){
 		NSString *path = TKBUNDLE(@"calendar-ios7/Month Calendar Date Tile Selected.png");
-		self.selectedImageView.image = [TKCalendarMonthView_ios7 image:[UIImage imageWithContentsOfFile:path] withTint:[UIColor blackColor]];
+        
+		self.selectedImageView.image = [TKCalendarMonthView_ios7 image:[UIImage imageWithContentsOfFile:path] withTint:self.selectedTintColor];
 		markWasOnToday = NO;
 	} else {
-        self.selectedImageView.image = [TKCalendarMonthView_ios7 image:[UIImage imageWithContentsOfFile:TKBUNDLE(@"calendar-ios7/Month Calendar Date Tile Selected.png")] withTint:[UIColor blackColor]];
+        self.selectedImageView.image = [TKCalendarMonthView_ios7 image:[UIImage imageWithContentsOfFile:TKBUNDLE(@"calendar-ios7/Month Calendar Date Tile Selected.png")] withTint:self.selectedTintColor];
         
     }
 	
@@ -516,10 +517,10 @@ static NSNumberFormatter *numberFormatter = nil;
 		markWasOnToday = YES;
 	}else if(markWasOnToday){
 		NSString *path = TKBUNDLE(@"calendar-ios7/Month Calendar Date Tile Selected.png");
-		self.selectedImageView.image = [TKCalendarMonthView_ios7 image:[UIImage imageWithContentsOfFile:path] withTint:[UIColor blackColor]];
+		self.selectedImageView.image = [TKCalendarMonthView_ios7 image:[UIImage imageWithContentsOfFile:path] withTint:self.selectedTintColor];
 		markWasOnToday = NO;
 	} else {
-        self.selectedImageView.image = [TKCalendarMonthView_ios7 image:[UIImage imageWithContentsOfFile:TKBUNDLE(@"calendar-ios7/Month Calendar Date Tile Selected.png")] withTint:[UIColor blackColor]];
+        self.selectedImageView.image = [TKCalendarMonthView_ios7 image:[UIImage imageWithContentsOfFile:TKBUNDLE(@"calendar-ios7/Month Calendar Date Tile Selected.png")] withTint:self.selectedTintColor];
     }
 	
 	[self addSubview:self.selectedImageView];
@@ -637,8 +638,24 @@ static NSNumberFormatter *numberFormatter = nil;
     }
 }
 
+- (void)tintColorDidChange {
+    [self.leftArrow removeFromSuperview];
+    [self.rightArrow removeFromSuperview];
+    _leftArrow = nil;
+    _rightArrow = nil;
+    [self selectDate:self.dateSelected];
+    
+	[self addSubview:self.leftArrow];
+	[self addSubview:self.rightArrow];
+}
+
 - (id) initWithSundayAsFirst:(BOOL)s timeZone:(NSTimeZone*)timeZone{
 	if (!(self = [super initWithFrame:CGRectMake(0, 0, VIEW_WIDTH, VIEW_WIDTH)])) return nil;
+
+    self.tintColor = [[TKCalendarMonthView appearance] tintColor];
+    self.selectedTintColor = [[TKCalendarMonthView appearance] selectedTintColor];
+    if(!self.selectedTintColor)
+        self.selectedTintColor = [UIColor blackColor];
     
     self.backgroundColor = [UIColor colorWithHex:0xaaaeb6];
 	self.timeZone = timeZone;
@@ -752,6 +769,7 @@ static NSNumberFormatter *numberFormatter = nil;
 	NSArray *data = [self.dataSource calendarMonthView:self marksFromDate:dates[0] toDate:[dates lastObject]];
 	
 	self.currentTile = [[TKCalendarMonthTiles_ios7 alloc] initWithMonth:month marks:data startDayOnSunday:self.sunday timeZone:self.timeZone];
+    self.currentTile.selectedTintColor = self.selectedTintColor;
 	[self.currentTile setTarget:self action:@selector(_tileSelectedWithData:)];
 	
 	[self.tileBox addSubview:self.currentTile];
@@ -856,6 +874,7 @@ static NSNumberFormatter *numberFormatter = nil;
 	NSArray *dates = [TKCalendarMonthTiles_ios7 rangeOfDatesInMonthGrid:nextMonth startOnSunday:self.sunday timeZone:self.timeZone];
 	NSArray *ar = [self.dataSource calendarMonthView:self marksFromDate:dates[0] toDate:[dates lastObject]];
 	TKCalendarMonthTiles_ios7 *newTile = [[TKCalendarMonthTiles_ios7 alloc] initWithMonth:nextMonth marks:ar startDayOnSunday:self.sunday timeZone:self.timeZone];
+    newTile.selectedTintColor = self.selectedTintColor;
 	[newTile setTarget:self action:@selector(_tileSelectedWithData:)];
 	
 	
