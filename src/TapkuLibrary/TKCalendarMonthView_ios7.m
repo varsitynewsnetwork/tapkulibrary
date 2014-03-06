@@ -642,11 +642,7 @@ static NSNumberFormatter *numberFormatter = nil;
 - (void)setSelectedTintColor:(UIColor *)selectedTintColor {
     if(_selectedTintColor != selectedTintColor) {
         _selectedTintColor = selectedTintColor;
-        if(self.dateSelected) {
-            [self.currentTile removeFromSuperview];
-            self.currentTile = nil;
-            [self _setupCurrentTileView:self.dateSelected];
-        }
+        self.currentTile.selectedTintColor = _selectedTintColor;
     }
 }
 
