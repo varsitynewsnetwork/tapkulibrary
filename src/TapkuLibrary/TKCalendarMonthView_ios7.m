@@ -601,7 +601,7 @@ static NSNumberFormatter *numberFormatter = nil;
 	
 	NSString *path = TKBUNDLE(@"calendar-ios7/Month Calendar Today Selected Tile.png");
     UIColor* tintColour = self.tintColor;
-	UIImage *img = [TKCalendarMonthView_ios7 image:[UIImage imageWithContentsOfFile:path] withTint:tintColour];
+	UIImage *img = [TKCalendarMonthView_ios7 image:[UIImage imageWithContentsOfFile:path] withTint:self.selectedTintColor];
 	_selectedImageView = [[UIImageView alloc] initWithImage:img];
 	_selectedImageView.layer.magnificationFilter = kCAFilterNearest;
 	_selectedImageView.frame = CGRectMake(0, 0, img.size.width, img.size.height);
