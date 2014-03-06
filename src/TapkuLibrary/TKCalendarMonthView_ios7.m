@@ -764,9 +764,10 @@ static NSNumberFormatter *numberFormatter = nil;
     return [super initWithFrame:frame];
 }
 
-- (void) didMoveToWindow{
-	if (self.window && !self.currentTile)
-		[self _setupCurrentTileView:[NSDate date]];
+- (void)didMoveToSuperview {
+    if (!self.currentTile) {
+    	[self _setupCurrentTileView:[NSDate date]];
+    }
 }
 
 #pragma mark Private Methods for setting up tiles
