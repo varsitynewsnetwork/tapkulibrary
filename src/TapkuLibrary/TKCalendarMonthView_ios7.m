@@ -273,6 +273,7 @@ static NSNumberFormatter *numberFormatter = nil;
     
 	return self;
 }
+
 - (void) setTarget:(id)t action:(SEL)a{
 	self.target = t;
 	self.action = a;
@@ -638,13 +639,21 @@ static NSNumberFormatter *numberFormatter = nil;
     }
 }
 
+- (void)setSelectedTintColor:(UIColor *)selectedTintColor {
+    if(_selectedTintColor != selectedTintColor) {
+        _selectedTintColor = selectedTintColor;
+        [self.currentTile removeFromSuperview];
+		self.currentTile = nil;
+		[self _setupCurrentTileView:self.dateSelected];
+    }
+}
+
 - (void)tintColorDidChange {
     [self.leftArrow removeFromSuperview];
     [self.rightArrow removeFromSuperview];
     _leftArrow = nil;
     _rightArrow = nil;
     [self selectDate:self.dateSelected];
-    
 	[self addSubview:self.leftArrow];
 	[self addSubview:self.rightArrow];
 }
@@ -652,10 +661,12 @@ static NSNumberFormatter *numberFormatter = nil;
 - (id) initWithSundayAsFirst:(BOOL)s timeZone:(NSTimeZone*)timeZone{
 	if (!(self = [super initWithFrame:CGRectMake(0, 0, VIEW_WIDTH, VIEW_WIDTH)])) return nil;
 
-    self.tintColor = [[TKCalendarMonthView appearance] tintColor];
-    self.selectedTintColor = [[TKCalendarMonthView appearance] selectedTintColor];
-    if(!self.selectedTintColor)
+    self.tintColor = [[TKCalendarMonthView_ios7 appearance] tintColor];
+    self.selectedTintColor = [[TKCalendarMonthView_ios7 appearance] selectedTintColor];
+    
+    if(!self.selectedTintColor) {
         self.selectedTintColor = [UIColor blackColor];
+    }
     
     self.backgroundColor = [UIColor colorWithHex:0xaaaeb6];
 	self.timeZone = timeZone;
