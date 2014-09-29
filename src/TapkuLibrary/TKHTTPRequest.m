@@ -60,7 +60,7 @@ static inline NSString * TKKeyPathFromOperationState(TKOperationState state) {
 #pragma mark - TKHTTPRequest
 @interface TKHTTPRequest () {
 	NSInteger _totalExpectedImageSize,_receivedDataBytes;
-	BOOL _cancled;
+	BOOL _cancelled;
 }
 
 @property (nonatomic,assign) TKOperationState state;
